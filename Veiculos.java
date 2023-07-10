@@ -29,9 +29,11 @@ public class Veiculos {
 	}
 
 	public void printDados(){
-		String s = getPreco() + "\n" + getModelo();
-		System.out.println(s);
+
+		System.out.println("Preço: " + preco);
+		System.out.println("Modelo: " + modelo);
 	}
+
 
 	public void inserirDados(){
 		Scanner in = new Scanner(System.in);
@@ -41,11 +43,11 @@ public class Veiculos {
 
 		System.out.printf("Digite o preco: ");
 		double preco1 = in.nextDouble();
-		
+
 
 		setModelo(modelo1);
 		setPreco(preco1);
-		
+
 	}
 
 
