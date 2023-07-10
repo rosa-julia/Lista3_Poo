@@ -1,7 +1,7 @@
-package lista3;
+package lojamidia;
 import java.util.Scanner;
 
-public class Midia{
+public class Midia {
 
 	private int codigo;
 	private double preco;
@@ -28,11 +28,12 @@ public class Midia{
 	}
 
 	public String getNome(){ 
-		return nome;
+		return nome; 
 	}
 
+
 	public Midia(){
-		this(0,0.0,"Nenhum"); 
+		this(0,0.0,"Vazio"); 
 	}
 
 	public Midia(int codigo, double preco, String nome){
@@ -41,21 +42,20 @@ public class Midia{
 		setNome(nome);
 	}
 
-
 	public String getTipo(){
-		return "Tipo de Mídia: ";
+		return "Midia: ";
 	}
 
-
 	public String getDetalhes(){
-		return "Digite o codigo do produto: " + getCodigo() + "\n" +
+		return "Codigo: " + getCodigo() + "\n" +
 				"Preco: " + getPreco() + "\n" +
 				"Nome: " + getNome();
 	}
 
 	public void printDados(){
-		String dados = getTipo() + "\n" + getDetalhes() + "\n";
-		System.out.println(dados);
+		System.out.println(getTipo());
+		System.out.println(getDetalhes());
+		System.out.println();
 	}
 
 	public void inserirDados(){
@@ -66,7 +66,7 @@ public class Midia{
 
 		System.out.printf("Digite o preco: ");
 		double preco1 = in.nextDouble();
-		in.nextLine(); 
+		in.nextLine();
 
 		System.out.printf("Digite o nome: ");
 		String nome1 = in.nextLine();
@@ -77,3 +77,4 @@ public class Midia{
 	}
 
 } 
+
